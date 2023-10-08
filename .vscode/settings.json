@@ -1,0 +1,5 @@
+{
+    "python.analysis.extraPaths": [
+        "/Users/jinzhang/Documents/github/robot-playwright-tutorial/code/."
+    ]
+}
