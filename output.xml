@@ -1,51 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.10.12 on darwin)" generated="20231007 22:32:50.116" rpa="true" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.10.12 on darwin)" generated="20231201 14:53:21.009" rpa="true" schemaversion="4">
 <suite id="s1" name="Tasks" source="/Users/jinzhang/Documents/github/robot-playwright-tutorial/code/tasks.robot">
-<test id="s1-t1" name="Example Test" line="12">
+<test id="s1-t1" name="Example Test" line="13">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20231201 14:53:22.663" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/Users/jinzhang/Documents/github/robot-playwright-tutorial/browser/traces/7504ef94-e4d0-4090-a738-d1288fa00cd8"}</msg>
+<msg timestamp="20231201 14:53:23.513" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/Users/jinzhang/Documents/github/robot-playwright-tutorial/browser/traces/7504ef94-e4d0-4090-a738-d1288fa00cd8"}</msg>
+<status status="PASS" starttime="20231201 14:53:22.661" endtime="20231201 14:53:23.514"/>
+</kw>
+<kw name="New Context" library="Browser">
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<msg timestamp="20231201 14:53:23.517" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "hideRfBrowser": "",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg timestamp="20231201 14:53:23.544" level="INFO">Successfully created context. </msg>
+<msg timestamp="20231201 14:53:23.544" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'hideRfBrowser': '', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<status status="PASS" starttime="20231201 14:53:23.514" endtime="20231201 14:53:23.544"/>
+</kw>
 <kw name="New Page" library="Browser">
 <arg>https://playwright.dev</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<msg timestamp="20231007 22:33:02.045" level="INFO">Keyword 'Take Screenshot  fail-screenshot-{index}' could not be run on failure:
-Error: Tried to take screenshot, but no page was open.</msg>
-<msg timestamp="20231007 22:33:02.048" level="INFO">See also file:///Users/jinzhang/Documents/github/robot-playwright-tutorial/playwright-log.txt for additional details.</msg>
-<msg timestamp="20231007 22:33:02.048" level="FAIL">TimeoutError: page.goto: Timeout 10000ms exceeded.
-=========================== logs ===========================
-navigating to "https://playwright.dev/", waiting until "load"
-============================================================
-Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</msg>
-<status status="FAIL" starttime="20231007 22:32:51.267" endtime="20231007 22:33:02.054"/>
+<msg timestamp="20231201 14:53:26.186" level="INFO">Successfully initialized new page object and opened url: https://playwright.dev</msg>
+<status status="PASS" starttime="20231201 14:53:23.545" endtime="20231201 14:53:26.187"/>
 </kw>
-<kw name="Get Text" library="Browser">
-<arg>h1</arg>
-<arg>contains</arg>
-<arg>Playwright</arg>
-<tag>Assertion</tag>
-<tag>Getter</tag>
-<tag>PageContent</tag>
-<doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="NOT RUN" starttime="20231007 22:33:02.054" endtime="20231007 22:33:02.055"/>
-</kw>
-<status status="FAIL" starttime="20231007 22:32:51.258" endtime="20231007 22:33:02.055">TimeoutError: page.goto: Timeout 10000ms exceeded.
-=========================== logs ===========================
-navigating to "https://playwright.dev/", waiting until "load"
-============================================================
-Tip: Use "Set Browser Timeout" for increasing the timeout or double check your locator as the targeted element(s) couldn't be found.</status>
+<status status="PASS" starttime="20231201 14:53:22.653" endtime="20231201 14:53:26.187"/>
 </test>
 <doc>Playwright template.</doc>
-<status status="FAIL" starttime="20231007 22:32:50.122" endtime="20231007 22:33:02.152"/>
+<status status="PASS" starttime="20231201 14:53:21.015" endtime="20231201 14:53:26.309"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tasks</stat>
+<stat pass="1" fail="0" skip="0">All Tasks</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="Tasks">Tasks</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tasks">Tasks</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231201 14:53:21.925" level="ERROR">Error in file '/Users/jinzhang/Documents/github/robot-playwright-tutorial/code/tasks.robot' on line 7: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Users/jinzhang/Documents/github/robot-playwright-tutorial/code
+  /Users/jinzhang/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_debug_adapter
+  /Users/jinzhang/Documents/github/robot-playwright-tutorial/code
+  /Users/jinzhang/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src
+  /Users/jinzhang/.vscode/extensions/robocorp.robotframework-lsp-1.11.0/src/robotframework_ls/vendored
+  /Users/Shared/robocorp/ht/49b3e07_b1f3c24_791b5f1e/lib/python310.zip
+  /Users/Shared/robocorp/ht/49b3e07_b1f3c24_791b5f1e/lib/python3.10
+  /Users/Shared/robocorp/ht/49b3e07_b1f3c24_791b5f1e/lib/python3.10/lib-dynload
+  /Users/Shared/robocorp/ht/49b3e07_b1f3c24_791b5f1e/lib/python3.10/site-packages</msg>
 </errors>
 </robot>

@@ -15,4 +15,4 @@ dependencies:
     - rpaframework==27.1.0            # https://rpaframework.org/releasenotes.html
 
 rccPostInstall:
-  - rfbrowser init chromium                    # Initialize Playwright
+  - rfbrowser init                    # Initialize Playwright
